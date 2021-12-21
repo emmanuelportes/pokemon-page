@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="/style/style.css" >
+    <title><%= title %></title>
+</head>
+<body>
+    <h3>Pokemons</h3>
+
+    <form>
+        <input type="text" id="search-bar" name="search-bar">
+        <input type="button" id="search-button" name="search-button" value="search">
+    </form>
+
+    <% for(let pokemon of pokemons){ %>
+        <div class="container">
+            <label> name: </label> <span> <%= pokemon.name %> </span> <br>
+            <label> url: </label> <span> <%= pokemon.url %> </span> <br>
+            <input type="button" value="import">
+        </div>
+    <% } %>
+
+        <script src="/js/main.js"></script>
+</body>
+</html>
